@@ -20,18 +20,18 @@ async def send_document(media, chat_id, caption, link, channel_name):
         await send_text(chat_id, caption, link, channel_name)
 # ----------------------------------------------------------------------------------------------------------------------
 
-@client.on(events.NewMessage(chats=["rybar", "tpolit", "box_of_pandora", "ASupersharij", "strelkovii", "SBelkovskiy", "helper0372"]))
+@client.on(events.NewMessage(chats=["rybar", "tpolit", "box_of_pandora", "ASupersharij", "strelkovii", "SBelkovskiy"]))
 async def handle_new_message(event):
-# event = oefhliughas;doihgba;owuirg - 1234565432345
-    message = event.message  # full info
-    media = message.media  # media info
-    caption = message.message  # text
-    chat_id = "ainewsusa"  # to
-    message_id = event.message.id  # message id
-    channel_id = event.chat_id  # id from ...
-    channel_entity = await client.get_entity(channel_id)  # channel info
-    channel_username = channel_entity.username  # channel username
-    channel_name = utils.get_display_name(channel_entity)  # channel name
+    
+    message = event.message  
+    media = message.media  
+    caption = message.message 
+    chat_id = "ainewsusa"  
+    message_id = event.message.id  
+    channel_id = event.chat_id  
+    channel_entity = await client.get_entity(channel_id) 
+    channel_username = channel_entity.username  
+    channel_name = utils.get_display_name(channel_entity)   
     link = f"https://t.me/{channel_username}/{message_id}"
 # ----------------------------------------------------------------------------------------------------------------------
 
