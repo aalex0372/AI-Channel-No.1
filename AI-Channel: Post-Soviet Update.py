@@ -1,6 +1,3 @@
-
-
-
 from telethon import TelegramClient, events, utils, types, sync
 import openai
 import Creds
